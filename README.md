@@ -82,4 +82,20 @@ VITE_APP_NAME=NexCart
 
 ## Deployment notes
 
-For Vercel or Netlify, configure a rewrite so `/api/*` reaches the backend host. Keep `VITE_API_BASE_URL=/api/v1` when using the rewrite, or set it to the full backend URL if deploying without a proxy.
+### Vercel + AWS backend
+
+This repo is configured to proxy API and upload requests to the AWS backend via `vercel.json`:
+
+- `/api/*` → `http://13.60.211.231:5000/api/*`
+- `/uploads/*` → `http://13.60.211.231:5000/uploads/*`
+
+In the Vercel project settings, set:
+
+```env
+VITE_API_BASE_URL=/api/v1
+VITE_APP_NAME=NexCart
+```
+
+Then deploy the repo. No CORS changes are needed on the backend when using the Vercel proxy.
+
+If you prefer calling the backend directly, set `VITE_API_BASE_URL=http://13.60.211.231:5000/api/v1` in Vercel and allow your Vercel domain in the backend CORS config.
