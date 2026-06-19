@@ -8,7 +8,7 @@ export default function UnauthorizedPage() {
       <Card className="max-w-lg text-center">
         <h1 className="text-3xl font-black">Unauthorized</h1>
         <p className="mt-3 text-slate-500 dark:text-slate-400">
-          Your current role does not have permission to access this workspace.
+          You do not have permission to view this page.
         </p>
         <Link
           to="/"

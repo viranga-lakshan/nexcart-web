@@ -49,8 +49,8 @@ export default function ProductDetailsPage() {
       {isError ? (
         <div className="lg:col-span-2">
           <ErrorState
-            title="Could not reach backend"
-            description="Showing available product information where possible."
+            title="Could not load product details"
+            description="Some information may be out of date."
           />
         </div>
       ) : null}

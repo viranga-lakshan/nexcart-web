@@ -18,11 +18,15 @@ export function DashboardLayout() {
       <div className="min-w-0 space-y-6">
         <Card className="bg-gradient-to-br from-indigo-600 to-slate-900 text-white">
           <p className="text-sm font-semibold uppercase tracking-wide text-indigo-100">
-            {user?.role ?? 'USER'} workspace
+            {user?.role === 'ADMIN'
+              ? 'Admin dashboard'
+              : user?.role === 'SELLER'
+                ? 'Seller dashboard'
+                : 'My account'}
           </p>
           <h1 className="mt-2 text-3xl font-bold">Welcome back, {user?.name ?? 'there'}</h1>
           <p className="mt-2 max-w-2xl text-indigo-100">
-            Role-aware dashboards keep shopper, seller, and admin experiences focused.
+            Manage your orders, profile, and listings from one place.
           </p>
         </Card>
         <Outlet />

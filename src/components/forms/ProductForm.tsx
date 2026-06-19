@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
+import { resolveAssetUrl } from '@/api/env';
 
 import {
   isValidProductImageUrl,
@@ -292,7 +293,7 @@ export function ProductForm({
                 key={`${url}-${index}`}
                 className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/60"
               >
-                <img alt="" className="aspect-square w-full object-cover" src={url} />
+                <img alt="" className="aspect-square w-full object-cover" src={resolveAssetUrl(url)} />
                 <button
                   aria-label="Remove image"
                   className="absolute right-2 top-2 rounded-full bg-slate-950/70 p-1 text-white transition hover:bg-rose-600"

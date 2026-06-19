@@ -74,7 +74,7 @@ export default function ProductsPage() {
         <p className="mt-3 text-slate-600 dark:text-slate-300">
           {selectedCategory
             ? `Browse products in ${selectedCategory.name}.`
-            : 'Search, filter, cache, and paginate product data through RTK Query.'}
+            : 'Search by name, filter by category, and find what you need.'}
         </p>
       </div>
 
@@ -118,8 +118,8 @@ export default function ProductsPage() {
       </div>
       {isError ? (
         <ErrorState
-          title="Using demo products"
-          description="Start nexcart-api on port 5000 to load live backend data."
+          title="Catalog temporarily unavailable"
+          description="Showing sample products while we reconnect to the store."
         />
       ) : null}
       {isFetching ? <div className="text-sm text-slate-500">Refreshing products...</div> : null}

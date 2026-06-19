@@ -35,7 +35,7 @@ const NotFoundPage = lazy(() => import('@/pages/system/NotFoundPage'));
 
 export function AppRouter() {
   return (
-    <Suspense fallback={<Loader label="Preparing NexCart" />}>
+    <Suspense fallback={<Loader label="Loading page" />}>
       <Routes>
         <Route element={<RootLayout />}>
           <Route index element={<HomePage />} />

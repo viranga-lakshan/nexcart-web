@@ -66,13 +66,15 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
       <Card className="w-full max-w-md">
         <div className="mb-8 text-center">
           <p className="text-sm font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-300">
-            Secure access
+            {isRegister ? 'Create account' : 'Sign in'}
           </p>
           <h1 className="mt-2 text-3xl font-bold text-slate-950 dark:text-white">
             {isRegister ? 'Create your account' : 'Welcome back'}
           </h1>
           <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
-            Refresh tokens stay in HTTP-only cookies while the access token powers API calls.
+            {isRegister
+              ? 'Join NexCart to shop, track orders, and save your favourites.'
+              : 'Sign in to view your orders, cart, and saved items.'}
           </p>
         </div>
         <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>

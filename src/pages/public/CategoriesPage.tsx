@@ -47,7 +47,7 @@ export default function CategoriesPage() {
                 <div className="p-5">
                   <h2 className="text-xl font-bold text-slate-950 dark:text-white">{category.name}</h2>
                   <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
-                    {category.description ?? `Explore curated products in ${category.name}.`}
+                    {category.description ?? `Shop ${category.name} products.`}
                   </p>
                 </div>
               </Card>
