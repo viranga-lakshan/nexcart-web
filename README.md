@@ -48,8 +48,8 @@ VITE_APP_NAME=NexCart
 
 `vercel.json` proxies API and upload requests to the AWS backend:
 
-- `/api/*` → `http://13.60.211.231:5000/api/*`
-- `/uploads/*` → `http://13.60.211.231:5000/uploads/*`
+- `/api/*` → `http://51.20.151.235:5000/api/*`
+- `/uploads/*` → `http://51.20.151.235:5000/uploads/*`
 
 Set these in Vercel:
 
@@ -58,7 +58,7 @@ VITE_API_BASE_URL=/api/v1
 VITE_APP_NAME=NexCart
 ```
 
-Do **not** set `VITE_API_ORIGIN` to `http://13.60.211.231:5000` on Vercel. That loads HTTP images on an HTTPS page and browsers block them. Keep image paths relative (`/uploads/...`) so Vercel can proxy them.
+Do **not** set `VITE_API_ORIGIN` to `http://51.20.151.235:5000` on Vercel. That loads HTTP images on an HTTPS page and browsers block them. Keep image paths relative (`/uploads/...`) so Vercel can proxy them.
 
 Redeploy after updating environment variables.
 
